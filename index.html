@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <div class="container-fluid text-center text-light bg-dark">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="clearfix">
+            <div class="col-4 float-left">
+                <nav class="navbar navbar-light bg-light shadow-lg p-3 mb-5 bg-white rounded">
+                    <h4>Search for a City:</h4>
+                    <form class="form-inline">
+                        <input id="city-input" class="form-control mr-sm-2" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button id="select-city" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <form id="searchhistory" class="mt-1">
+                        <!-- where the search history will begin to populate -->
+                    </form>
+                </nav>
+            </div>
+            <div class="col-8 float-right">
+                <div class="card bg-light text-dark p-2 rem shadow-lg p-3 mb-5 bg-white rounded"
+                    style="width: 710; height: 19rem;">
+                    <div id="current"></div>
+                    <!-- where the current weather conditions for the latest city searched will populate -->
+                    <div id="uv-display"></div>
+                </div>
+                <br>
+                <h2>5-Day Forecast:</h2>
+                <div id="forecast5day" class="row">
+                    <!-- where the five day forecast will dynamically appear once the search is initiated -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
